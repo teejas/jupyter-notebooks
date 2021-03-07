@@ -5,8 +5,6 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="Tejas Siripurapu modded datascience-notebook <tejas97siripruapu@gmail.com>"
 
-
-
-COPY . /notebook
-
-WORKDIR /notebook
+RUN rmdir work
+COPY . .
+RUN ls
