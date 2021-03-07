@@ -4,13 +4,11 @@ FROM ubuntu:18.04
 
 LABEL maintainer="Tejas Siripurapu modded datascience-notebook <tejas97siripruapu@gmail.com>"
 
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip git
+RUN apt-get update && apt-get install -y python3 python3-pip git
 
 RUN git clone https://github.com/teejas/jupyter-notebooks.git notebook
 WORKDIR notebook
 
-RUN ls
-RUN pip3 install -r requirements.txt
+RUN ls && pip3 install -r requirements.txt
 
-RUN jupyter notebook --port=8888 --no-browser 
+CMD jupyter notebook --port=8888 --no-browser --allow-root
