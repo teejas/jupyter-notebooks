@@ -2,7 +2,7 @@
 # Distributed under the terms of the Modified BSD License.
 FROM ubuntu:18.04
 
-LABEL maintainer="Tejas Siripurapu modded datascience-notebook <tejas97siripruapu@gmail.com>"
+LABEL maintainer="Tejas Siripurapu Jupyter NB Server <tejas97siripruapu@gmail.com>"
 
 RUN apt-get update && apt-get install -y python3 python3-pip git
 
