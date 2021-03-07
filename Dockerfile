@@ -9,6 +9,6 @@ RUN apt-get update && apt-get install -y python3 python3-pip git
 RUN git clone https://github.com/teejas/jupyter-notebooks.git notebook
 WORKDIR notebook
 
-RUN ls && pip3 install -r requirements.txt
+RUN ls && pip3 install -r requirements.txt && jupyter contrib nbextension install --user
 
 CMD jupyter notebook --port=8888 --no-browser --allow-root

@@ -1,10 +1,28 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
   name: nb-volume
 spec:
+  storageClassName: "standard"
+  capacity:
+    storage: 50G
+  accessModes:
+    - ReadWriteOnce
+  claimRef:
+    namespace: default
+    name: nb-volume-claim
+    # gcePersistentDisk:
+    # pdName: jupyter-nb-server
+    # fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nb-volume-claim
+spec:
+  storageClassName: "standard"
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 50Gi
+      storage: 50G
