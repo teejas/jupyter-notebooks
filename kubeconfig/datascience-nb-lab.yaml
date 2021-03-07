@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datascience-lab
+  labels:
+    image: datascience-notebook-tejas-mod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: datascience-lab-pod
+  template:
+    metadata:
+      labels:
+        name: datascience-lab-pod
+    spec:
+      containers:
+      - name: datascience-lab
+        image: tj1997/jupyter-nb-images:latest
+        ports:
+        - containerPort: 8888
+        env:
+        - name: JUPYTER_ENABLE_LAB
+          value: "yes"

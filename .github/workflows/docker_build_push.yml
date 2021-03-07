@@ -50,4 +50,3 @@ jobs:
       - name: Push Images to DockerHub
         if: github.ref == 'refs/heads/master'
         run: make -C main push-all
-          LOCAL_PATH: ../wiki
