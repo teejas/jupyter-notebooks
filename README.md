@@ -1,6 +1,6 @@
 # Jupyter Notebook Server
 
-Repository containing Jupyter notebook files, Dockerfile to build a modded jupyter/datascience-notebook, and kubeconfig files to deploy that image as a k8s deployment and create a persistent volume attached to the notebook server.
+Repository containing Jupyter notebook files, Dockerfile to build a Jupyter notebook server with this repo loaded as the working directory, and kubeconfig files to deploy that image as a k8s deployment and create a persistent volume attached to the notebook server.
 
 ## MusicRecSys/
 
