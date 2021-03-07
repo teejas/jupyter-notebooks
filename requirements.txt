@@ -2,3 +2,5 @@ pandas
 numpy
 xlrd
 matplotlib
+jupyter
+jupyterlab
