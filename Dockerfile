@@ -11,4 +11,6 @@ WORKDIR notebook
 
 RUN ls && pip3 install -r requirements.txt && jupyter contrib nbextension install --user
 
+EXPOSE 8888 8889
+
 CMD jupyter-lab --port=8888 --no-browser --allow-root
