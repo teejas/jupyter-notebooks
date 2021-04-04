@@ -13,4 +13,4 @@ RUN ls && pip3 install -r requirements.txt && jupyter contrib nbextension instal
 
 EXPOSE 8888 8889
 
-CMD jupyter-lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+CMD jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
