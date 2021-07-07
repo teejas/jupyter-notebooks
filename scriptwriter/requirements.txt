@@ -1,0 +1,4 @@
+tensorflow
+bs4
+transformers
+torch
