@@ -1,5 +1,3 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
 FROM ubuntu:18.04
 
 LABEL maintainer="Tejas Siripurapu Jupyter NB Server <tejas97siripruapu@gmail.com>"
