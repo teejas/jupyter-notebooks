@@ -5,3 +5,5 @@ matplotlib
 jupyter
 jupyterlab
 jupyter_contrib_nbextensions
+networkx
+tweepy

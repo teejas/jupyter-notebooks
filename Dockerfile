@@ -1,14 +1,12 @@
-FROM ubuntu:18.04
+FROM python:3.9.16-slim-bullseye
 
 LABEL maintainer="Tejas Siripurapu Jupyter NB Server <tejas97siripruapu@gmail.com>"
 
-RUN apt-get update && apt-get install -y python3 python3-pip git
+RUN apt-get update && apt-get install -y gcc
+RUN pip install jupyterlab
 
-RUN git clone https://github.com/teejas/jupyter-notebooks.git notebook
-WORKDIR notebook
+EXPOSE 8888
 
-RUN ls && pip3 install -r requirements.txt && jupyter contrib nbextension install --user
+CMD jupyter-lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
 
-EXPOSE 8888 8889
-
-CMD jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+# docker run -p 8888:8888 -v ${PWD}:/home -d tj1997/jupyter-nb-images:localnb
